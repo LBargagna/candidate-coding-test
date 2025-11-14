@@ -1,17 +1,6 @@
 /**
- * TEST DI PROGRAMMAZIONE PER CANDIDATI
- * 
- * Questa funzione simula un sistema di monitoraggio dati dei sensori. Il tuo compito è identificare
- * e correggere i bug che impediscono il corretto funzionamento.
- * 
- * REQUISITI:
- * 1. Trova e correggi esattamente 2 bug nel codice
- * 2. I bug potrebbero essere errori logici, non errori di sintassi
- * 3. Testa le tue correzioni eseguendo la funzione di test
- * 
- * TEMPO LIMITE: 15 minuti
- */
-
+ * Questa funzione simula un sistema di monitoraggio dati dei sensori.
+ **/
 interface ISensorData {
   sensorId: string;
   timestamp: Date;
@@ -43,9 +32,8 @@ class SensorMonitoringSystem {
 
     const now = new Date();
     const timeSinceLastTransmission = (now.getTime() - sensor.lastTransmission.getTime()) / 1000;
-    const offlineThreshold = sensor.intervalSeconds * 2 + 300; // 2x intervallo + 5min buffer
+    const offlineThreshold = sensor.intervalSeconds * 2 + 300;
 
-    // Bug 1: Errore logico semplice (FACILE - dovrebbe essere trovato in ~3 minuti)
     return timeSinceLastTransmission < offlineThreshold;
   }
 
@@ -65,7 +53,6 @@ class SensorMonitoringSystem {
     const cutoffTime = new Date(Date.now() - lastNSeconds * 1000);
     
     return this.dataHistory.filter(data => {
-      // Bug 2: Errore logico sottile nelle condizioni di filtraggio (DIFFICILE - richiede analisi attenta)
       return data.sensorId === sensorId || data.timestamp >= cutoffTime;
     });
   }
