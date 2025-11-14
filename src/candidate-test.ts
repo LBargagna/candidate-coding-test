@@ -72,7 +72,7 @@ class SensorMonitoringSystem {
   }
 }
 
-// Funzione di test - eseguila per verificare le tue correzioni
+// Funzione di test - npm test
 function testSensorSystem(): void {
   const system = new SensorMonitoringSystem();
   
