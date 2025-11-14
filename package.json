@@ -1,0 +1,24 @@
+{
+  "name": "candidate-coding-test",
+  "version": "1.0.0",
+  "description": "Test di programmazione per candidati sviluppatori - Sistema di monitoraggio sensori",
+  "main": "candidate-test.ts",
+  "scripts": {
+    "test": "npx ts-node candidate-test.ts",
+    "start": "npx ts-node candidate-test.ts"
+  },
+  "keywords": [
+    "coding-test",
+    "interview",
+    "typescript",
+    "sensors",
+    "debugging"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
