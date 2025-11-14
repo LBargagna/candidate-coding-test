@@ -125,7 +125,7 @@ function testSensorSystem(): void {
   console.log('Dati recenti sensor1 (ultimi 300s):', system.getRecentData('sensor1', 300).length); // Dovrebbe essere 2
   console.log('Dati recenti sensor2 (ultimi 300s):', system.getRecentData('sensor2', 300).length); // Dovrebbe essere 1
   
-  // Risultati attesi dopo aver corretto i bug:
+  // Risultati attesi:
   // Riassunto: { total: 2, online: 1, offline: 1 }
   // Sensor1 offline? false
   // Sensor2 offline? true  
